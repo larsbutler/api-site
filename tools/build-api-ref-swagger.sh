@@ -32,4 +32,14 @@ function convert_to_swagger {
 
 }
 
+function swagger_bootprint_html {
+    # Generate HTML plus CSS for each Swagger file
+      for i in swagger/*.json
+        do
+        service_dir=${i%.*}
+        bootprint openapi $i $service_dir
+      done
+}
+
 convert_to_swagger
+swagger_bootprint_html

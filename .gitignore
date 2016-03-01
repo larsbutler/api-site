@@ -9,6 +9,7 @@ target/
 /api-quick-start/build/
 /firstapp/build*/
 swagger/
+node_modules/
 
 # Packages
 *.egg
