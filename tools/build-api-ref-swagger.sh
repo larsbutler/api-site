@@ -33,6 +33,9 @@ function convert_to_swagger {
 }
 
 function swagger_bootprint_html {
+    # Copy in source files which are already in Swagger format
+    cp api-ref/src/swagger/*.json swagger/
+
     # Generate HTML plus CSS for each Swagger file
       for i in swagger/*.json
         do
